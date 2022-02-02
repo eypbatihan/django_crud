@@ -1,0 +1,10 @@
+{% extends 'student/base.html' %}
+
+
+{% block content %}
+    {{student.first_name}} {{student.last_name}}
+    <br>
+    <a href=" {% url 'update' student.id %} "><button>UPDATE</button></a>
+    <a href=" {% url 'delete' student.id %} "><button>DELETE</button></a>
+{% endblock content %}
+    

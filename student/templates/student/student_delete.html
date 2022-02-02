@@ -1,0 +1,14 @@
+{% extends 'student/base.html' %}
+
+
+
+{% block content %}
+    <form action="" method="POST">
+        <p>Are you sure {{student.first_name}} {{student.last_name}} deleted! </p>
+        {% csrf_token %}
+        <input type="submit" value="delete">
+        
+    </form>
+    <a href="{% url 'list' %}"><button>CANCEL</button></a>
+{% endblock content %}
+    

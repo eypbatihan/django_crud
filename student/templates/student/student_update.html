@@ -1,0 +1,13 @@
+{% extends 'student/base.html' %}
+
+
+{% block content %}
+   <form action="" method="POST">
+        {{form.as_p}}
+        {% csrf_token %}
+    <input type="submit" value="save">
+     <a href=" {% url 'list' %} "><button>BACK</button></a>
+   </form>
+  
+{% endblock content %}
+    
